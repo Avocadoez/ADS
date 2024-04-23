@@ -1,0 +1,85 @@
+@import url('https://fonts.googleapis.com/css2?family=Rubik:wght@300;400;500;600;700;800&display=swap');
+
+*{
+    margin: 0;
+    padding: 0;
+    font-family: 'Poppins', sans-serif;
+}
+.container{
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.5rem;
+}
+.plot{
+    position: relative;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: contain;
+    width: calc(100svh / 1.7);
+    aspect-ratio: 1/0.5;
+    padding: 1rem;
+    cursor: pointer;
+}
+.plot:hover::before{
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 100%;
+    background: rgba(178, 219, 255, 0.2);
+}
+
+.gallery{
+    position: fixed;
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 100%;
+    background: #fff;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    display: none;
+}
+
+.gallery .name{
+    position: absolute;
+    top: 1rem;
+    left: 2.5rem;
+    font-size: 20px;
+    font-weight: 600;
+    color: #191c3d;
+}
+.gallery svg{
+    position: absolute;
+    top: 50%;
+    transform: translate(0, -50%);
+    padding: 0.5rem;
+    height: 50px;
+    width: 50px;
+    cursor: pointer;
+}
+.gallery svg.left{
+    left: 2rem;
+    transform: translate(0, -50%) rotate(180deg);
+}
+.gallery svg.right{
+    right: 2rem;
+}
+.gallery svg path{
+    fill: none;
+    stroke: #191c3d;
+    stroke-linecap: round;
+    stroke-width: 5;
+}
+
+.gallery .image{
+    width: 80vw;
+    aspect-ratio: 1/0.5;
+    /* background: #f66; */
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: contain;
+}
